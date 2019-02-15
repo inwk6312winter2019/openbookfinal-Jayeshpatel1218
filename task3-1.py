@@ -8,6 +8,6 @@ def GetToken():
     data= json.dumps(data)
     headers = {'Content-type': 'application/json'}
     response = requests.post(url, data=data,headers=headers)
-    return response.json()
+    print(response.json()['response']['serviceTicket'])
 
-print(GetToken())
+geticket()
